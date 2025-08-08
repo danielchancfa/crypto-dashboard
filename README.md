@@ -64,7 +64,7 @@ This POC showcases advanced data & analytics capabilities for crypto hedge fund 
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/danielchancfa/crypto-dashboard.git
 cd cryptoDashboard
 ```
 
@@ -183,4 +183,4 @@ MIT License - see LICENSE file for details
 
 ## 📞 Support
 
-For questions or support, please open an issue in the repository. 
+For questions or support, please open an issue in the repository.
