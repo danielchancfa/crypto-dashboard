@@ -1,0 +1,50 @@
+# SSH Keys and Certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+crypto-dashboard-vm_key.pem
+
+# Environment files with secrets
+.env
+*.env
+.env.local
+.env.production
+
+# API Keys and Credentials
+*api_key*
+*secret*
+*password*
+config.py
+local_config.py
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
