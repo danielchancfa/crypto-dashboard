@@ -1,0 +1,23 @@
+# Azure Deployment Configuration for Crypto Dashboard
+# Copy this file to terraform.tfvars and fill in your values
+
+environment = "prod"
+location    = "East US"
+
+# Database Configuration
+db_username = "crypto_admin"
+db_password = "your_secure_password_here"
+
+# API Keys (Get these from respective exchanges)
+binance_api_key    = "your_binance_api_key"
+binance_secret_key = "your_binance_secret_key"
+coinbase_api_key   = "your_coinbase_api_key"
+coinbase_secret_key = "your_coinbase_secret_key"
+coingecko_api_key  = "your_coingecko_api_key"
+
+# Optional: Override default SKUs if needed
+# app_service_plan_sku = "P1v2"
+# postgresql_sku = "B_Standard_B1ms"
+# redis_sku = "Basic"
+# storage_account_tier = "Standard"
+# container_registry_sku = "Basic" 

@@ -27,7 +27,7 @@ This POC showcases advanced data & analytics capabilities for crypto hedge fund 
                        │                 │
                        │ • PostgreSQL    │
                        │ • Redis         │
-                       │ • S3            │
+                       │ • Azure Storage │
                        └─────────────────┘
 ```
 
@@ -58,7 +58,7 @@ This POC showcases advanced data & analytics capabilities for crypto hedge fund 
 ### Prerequisites
 - Python 3.9+
 - Docker & Docker Compose
-- AWS Account (for deployment)
+- Azure Account (for production deployment)
 
 ### Local Development
 
@@ -96,6 +96,40 @@ streamlit run app/main.py
 docker-compose up -d
 ```
 
+## 🚀 Production Deployment
+
+### Azure Deployment (Recommended)
+
+For production deployment to Azure with enterprise-grade infrastructure:
+
+1. **Quick Deployment**
+```bash
+# Copy configuration
+cp deployment/azure/terraform.tfvars.example deployment/azure/terraform.tfvars
+
+# Edit configuration with your values
+nano deployment/azure/terraform.tfvars
+
+# Run automated deployment
+./deployment/azure/deploy.sh
+```
+
+2. **Detailed Guide**
+   - 📖 [Azure Deployment Guide](AZURE_DEPLOYMENT.md)
+   - 📋 [Deployment Checklist](deployment/azure/CHECKLIST.md)
+   - 🔧 [Manual Deployment Steps](deployment/azure/README.md)
+
+### AWS Deployment
+
+For AWS deployment (legacy):
+
+```bash
+cd deployment/terraform
+terraform init
+terraform plan
+terraform apply
+```
+
 ## 📊 Dashboard Pages
 
 1. **Real-Time Monitor**: Live price feeds, P&L tracking, and market overview
@@ -116,10 +150,9 @@ COINBASE_API_KEY=your_coinbase_api_key
 DATABASE_URL=postgresql://user:password@localhost:5432/crypto_dashboard
 REDIS_URL=redis://localhost:6379
 
-# AWS Configuration
-AWS_ACCESS_KEY_ID=your_aws_access_key
-AWS_SECRET_ACCESS_KEY=your_aws_secret_key
-AWS_REGION=us-east-1
+# Azure Configuration (for production)
+AZURE_STORAGE_ACCOUNT=your_storage_account
+AZURE_STORAGE_KEY=your_storage_key
 ```
 
 ## 🧪 Testing
@@ -135,25 +168,24 @@ pytest --cov=app
 pytest tests/test_data_validators.py
 ```
 
-## 🚀 AWS Deployment
+## 🚀 Deployment Options
 
-### Prerequisites
-- AWS CLI configured
-- Terraform installed
+### Azure (Production-Ready)
+- ✅ Enterprise-grade infrastructure
+- ✅ Financial industry compliance
+- ✅ Auto-scaling and high availability
+- ✅ Comprehensive monitoring and alerting
+- ✅ Cost optimization and management
 
-### Deploy Infrastructure
-```bash
-cd deployment/terraform
-terraform init
-terraform plan
-terraform apply
-```
+### AWS (Legacy)
+- ✅ Cloud-native architecture
+- ✅ Scalable infrastructure
+- ✅ Managed services integration
 
-### Deploy Application
-```bash
-cd deployment/scripts
-./deploy.sh
-```
+### Local Development
+- ✅ Quick setup and testing
+- ✅ Docker containerization
+- ✅ Development-friendly environment
 
 ## 📈 Key Metrics Tracked
 
@@ -168,6 +200,8 @@ cd deployment/scripts
 - Data validation and sanitization
 - Rate limiting and API quota management
 - Audit logging for all data operations
+- Network security groups and firewalls
+- Encrypted storage and communications
 
 ## 📝 License
 
@@ -184,3 +218,17 @@ MIT License - see LICENSE file for details
 ## 📞 Support
 
 For questions or support, please open an issue in the repository.
+
+## 🎯 Success Metrics
+
+This project demonstrates:
+
+- ✅ **Technical Excellence**: Enterprise-grade infrastructure and architecture
+- ✅ **Data Accuracy**: Multi-source validation and reconciliation
+- ✅ **Real-time Capabilities**: Live streaming and monitoring
+- ✅ **Risk Management**: Comprehensive risk analysis and metrics
+- ✅ **Scalability**: Auto-scaling and performance optimization
+- ✅ **Security**: Financial-grade security measures
+- ✅ **Compliance**: Industry-standard compliance and audit trails
+
+Perfect for showcasing your capabilities as a **Data and Analytics Manager** for crypto hedge fund operations!
